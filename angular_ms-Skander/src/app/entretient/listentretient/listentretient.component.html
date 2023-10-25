@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<section>
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <b>
+                        <img src="https://i.stack.imgur.com/bXAW8.png" alt="homepage" class="logo" />
+                    </b>
+                </a>
+            </div>
+            <div class="navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listcontrat">Contrat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listportfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listoffreemplois"> Offre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listtest">Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listformation">Formation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listentretient">Entretien</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- User profile and search -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav my-lg-0">
+                    <!-- ============================================================== -->
+                    <!-- Search -->
+                    <!-- ============================================================== -->
+
+                    <!-- ============================================================== -->
+                    <!-- End Comment -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Messages -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-email"></i>
+                            <div class="notify">
+                                <span class="heartbit"></span>
+                                <span class="point"></span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">
+                            <ul>
+                                <!-- Example Entretien Items -->
+                                <li>
+                                    <div class="message-center">
+                                        <!-- Entretien Item -->
+                                        <a href="#">
+                                            <div class="user-img">
+                                                <img src="../assets/images/users/1.jpg" alt="user" class="img-circle" />
+                                                <span class="profile-status online pull-right"></span>
+                                            </div>
+                                            <div class="mail-contnet">
+                                                <h5>Entretien Title 1</h5>
+                                                <span class="mail-desc">Entretien description 1</span>
+                                                <span class="time">9:30 AM</span>
+                                            </div>
+                                        </a>
+                                        <!-- End Entretien Item -->
+                                        <!-- Entretien Item -->
+                                        <a href="#">
+                                            <div class="user-img">
+                                                <img src="../assets/images/users/2.jpg" alt="user" class="img-circle" />
+                                                <span class="profile-status busy pull-right"></span>
+                                            </div>
+                                            <div class="mail-contnet">
+                                                <h5>Entretien Title 2</h5>
+                                                <span class="mail-desc">Entretien description 2</span>
+                                                <span class="time">9:10 AM</span>
+                                            </div>
+                                        </a>
+                                        <!-- End Entretien Item -->
+                                        <!-- Add more Entretien items as needed -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- End Messages -->
+                    <!-- ... (rest of your code) -->
+                </ul>
+                <!-- Profile -->
+            </div>
+        </nav>
+    </header>
+</section>
+<!-- List of Entretiens -->
+<section class="pb-20 bg-blueGray-200">
+    <div class="container px-4">
+        <div class="flex flex-wrap" style="padding-top: 150px">
+            <div class="flex-auto p-5 lg:p-10">
+                <nav>
+                    <button
+                      mat-raised-button
+                      class="btn btn-primary btn-round"
+                      routerLink="/addentretient"
+                    >
+                      Ajouter entretien
+                    </button>
+                  </nav>
+                  <br />
+                <h4 class="text-2xl font-semibold">List of Entretiens</h4>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Date/Heure</th>
+                        <th>Lieu</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let entretien of entretiens">
+                        <td>{{ entretien.id }}</td>
+                        <td>{{ entretien.date_heure }}</td>
+                        <td>{{ entretien.lieu }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Navbar -->
+</body>
+</html>

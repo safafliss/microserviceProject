@@ -1,0 +1,15 @@
+.logo {
+    width: 200px;
+    height: 70px;
+  }
+ /* Add your custom CSS styles here */
+
+  
+  /* Add more custom styles as needed */
+  .topbar {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: 100px;
+  }

@@ -1,0 +1,58 @@
+<section id="wrapper">
+    <div class="login-register" style="background-image:url(../assets/images/background/login-register.jpg);">
+        <div class="login-box card">
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="loginUser()" class="form-horizontal form-material" action="index.html">
+                    <h3 class="box-title m-b-20">Sign In</h3>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <input class="form-control" type="text" formControlName="email" id="email" placeholder="Email" required />
+                        <div *ngIf="form.get('email').hasError('required') && form.get('email').touched" class="text-danger">
+                          Email is required.
+                        </div>
+                        <div *ngIf="form.get('email').hasError('email') && form.get('email').touched" class="text-danger">
+                          Invalid email format.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <input class="form-control" type="password" formControlName="password" id="password" placeholder="Password" required />
+                        <div *ngIf="form.get('password').hasError('required') && form.get('password').touched" class="text-danger">
+                          Password is required.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <div class="checkbox checkbox-success p-t-0">
+                          <input id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue" />
+                          <label for="checkbox-signup">I agree to all <a href="javascript:void(0)">Terms</a></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group text-center p-b-20">
+                      <div class="col-xs-12">
+                        <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" type="submit">Sign In</button>
+                        <div *ngIf="form.invalid && formSubmitted" class="text-danger">
+                          Please fill in both email and password fields.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-12 text-center">
+                            Don't have an account? 
+                            <a [routerLink]="['/register']" class="text-info m-l-5"><b>Sign Up</b></a>
+                        </div>
+                    </div>
+                    
+                  </form>
+                
+               
+                <!-- End of your Angular form -->
+            </div>
+        </div>
+    </div>
+</section>

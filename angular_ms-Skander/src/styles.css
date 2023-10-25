@@ -1,0 +1,43 @@
+/* Exemple de règle CSS pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Exemple de règle CSS pour les en-têtes */
+h1 {
+    color: #333;
+}
+
+/* Exemple de règle CSS pour les liens */
+a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+/* Exemple de règle CSS pour le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Exemple de règle CSS pour les boutons */
+button {
+    background-color: #0078d4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ajoutez d'autres règles CSS selon vos besoins */

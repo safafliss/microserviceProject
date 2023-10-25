@@ -1,0 +1,31 @@
+<h2>User List</h2>
+<hr />
+<a class="nav-link" class="btn btn-success" routerLink="/create">Add User</a>
+<br/>
+<br/>
+<table class="table">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of users; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.email }}</td>
+      <td>
+        <a [routerLink]="['/edit', item._id]" class="btn btn-primary">Edit</a> |
+        <a
+          href="javascript:void(0);"
+          class="btn btn-danger"
+          (click)="deleteUser(item._id)"
+          >Delete</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
